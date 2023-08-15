@@ -8,7 +8,9 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -43,23 +45,27 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun CardHeader(){
     Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .fillMaxHeight()
+            .background(color = Color.DarkGray),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Box(
-            Modifier.background(color = Color.Blue)
-        ){
-            Image(
+        Image(
                 painter = painterResource(id = R.drawable.android_logo),
                 contentDescription = null,
                 contentScale = ContentScale.Crop,
                 modifier = Modifier.padding(bottom = 8.dp)
             )
-    }
 
         Text(
             text = "Grant Williams",
-            fontSize = 30.dp
+            modifier = Modifier.padding(bottom = 8.dp, top = 8.dp)
+        )
+
+        Text(
+            text = "Android Developer Extraordinaire"
         )
     }
 }
