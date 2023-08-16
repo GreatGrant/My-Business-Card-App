@@ -47,24 +47,22 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun CardHeader(){
+fun CardHeader() {
     Column(
         modifier = Modifier
-            .fillMaxWidth()
-            .fillMaxHeight()
-            .background(color = Color.DarkGray),
+            .fillMaxSize(),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
+    ) {
         Image(
-                painter = painterResource(id = R.drawable.android_logo),
-                contentDescription = null,
-                contentScale = ContentScale.Crop,
-                modifier = Modifier
-                    .height(120.dp)
-                    .width(150.dp)
-                    .padding(bottom = 8.dp)
-            )
+            painter = painterResource(id = R.drawable.android_logo),
+            contentDescription = null,
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .height(120.dp)
+                .width(150.dp)
+                .padding(bottom = 8.dp)
+        )
 
         Text(
             text = "Grant Williams",
@@ -76,57 +74,68 @@ fun CardHeader(){
         )
     }
 
-    Column(modifier = Modifier
-        .fillMaxWidth()
-        .padding(top = 500.dp, bottom = 70.dp),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally){
-
-        Row(modifier = Modifier
-            .fillMaxWidth()
-            .padding(start = 40.dp),
-            ){
-
-            Icon(
-                painter = painterResource(id = R.drawable.baseline_phone_24),
-                contentDescription = null,
-            )
-
-            Text(
-                text = "+2348027904351",
-                modifier = Modifier.padding(start = 8.dp)
-            )
-        }
-
-        Row(modifier = Modifier
-            .fillMaxWidth()
-            .padding(40.dp)) {
-            Icon(
-                painter = painterResource(id = R.drawable.baseline_share_24),
-                contentDescription = null,
-            )
-
-            Text(
-                text = "@iAmGreatGrant",
-                modifier = Modifier.padding(start = 8.dp))
-        }
-
-        Row(
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+        Column(
             modifier = Modifier
-                .padding(start = 40.dp)
-                .fillMaxWidth()
-            ){
-            Icon(
-                painter = painterResource(id = R.drawable.baseline_message_24),
-                contentDescription = null
-            )
-            Text(
-                text = "greatgrant116@gmail.com",
-                modifier = Modifier.padding(start = 8.dp)
-            )
+                .align(Alignment.BottomCenter)
+        ) {
+            Row(
+                modifier = Modifier
+                    .padding(bottom = 16.dp)
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.baseline_phone_24),
+                    contentDescription = null,
+                )
+                Text(
+                    text = "+2348027904351",
+                    modifier = Modifier.padding(start = 8.dp)
+                )
+            }
+
+            Row(
+                modifier = Modifier
+                    .padding(bottom = 16.dp)
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.baseline_share_24),
+                    contentDescription = null,
+                )
+                Text(
+                    text = "@iAmGreatGrant",
+                    modifier = Modifier.padding(start = 8.dp)
+                )
+            }
+
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth(),
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Icon(
+                    painter = painterResource(id = R.drawable.baseline_message_24),
+                    contentDescription = null
+                )
+                Text(
+                    text = "greatgrant116@gmail.com",
+                    modifier = Modifier.padding(start = 8.dp)
+                )
+            }
         }
     }
 }
+
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
