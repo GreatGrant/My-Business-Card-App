@@ -27,6 +27,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.gralliams.mybusinesscardapp.ui.theme.MyBusinessCardAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -66,11 +67,13 @@ fun CardHeader() {
 
         Text(
             text = "Grant Williams",
-            modifier = Modifier.padding(bottom = 8.dp, top = 8.dp)
+            modifier = Modifier.padding(bottom = 8.dp, top = 8.dp),
+            fontSize = 20.sp
         )
 
         Text(
-            text = "Android Developer Extraordinaire"
+            text = "Android Developer Extraordinaire",
+            color = Color.Green
         )
     }
 
@@ -93,6 +96,7 @@ fun CardHeader() {
                 Icon(
                     painter = painterResource(id = R.drawable.baseline_phone_24),
                     contentDescription = null,
+                    tint = Color.Green,
                 )
                 Text(
                     text = "+2348027904351",
@@ -110,6 +114,7 @@ fun CardHeader() {
                 Icon(
                     painter = painterResource(id = R.drawable.baseline_share_24),
                     contentDescription = null,
+                    tint = Color.Green,
                 )
                 Text(
                     text = "@iAmGreatGrant",
@@ -125,6 +130,7 @@ fun CardHeader() {
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.baseline_message_24),
+                    tint = Color.Green,
                     contentDescription = null
                 )
                 Text(
