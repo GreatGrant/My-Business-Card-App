@@ -151,7 +151,7 @@ fun RowItem(iconResId: Int, text: String) {
 }
 
 @Preview(
-    showBackground =rue,
+    showBackground = true,
     showSystemUi = true)
 @Composable
 fun BusinessCardPreview() {

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My Business Card App</string>
     <string name="phone_number">+2348027904451</string>
-    <string name="email">greatgrant@gmail.com</string>
+    <string name="email">gw@android.com</string>
     <string name="username">\@iAmGreatGrant</string>
     <string name="caption">Android Developer Extraordinaire</string>
     <string name="grant_williams">Grant Williams</string>
