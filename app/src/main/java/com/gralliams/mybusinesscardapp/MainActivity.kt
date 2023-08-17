@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -26,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -72,13 +74,13 @@ fun CardHeader() {
         }
 
         Text(
-            text = "Grant Williams",
+            text = stringResource(R.string.grant_williams),
             modifier = Modifier.padding(bottom = 8.dp, top = 8.dp),
             fontSize = 36.sp
         )
 
         Text(
-            text = "Android Developer Extraordinaire",
+            text = stringResource(R.string.caption),
             color = colorResource(R.color.teal_700)
         )
     }
@@ -109,9 +111,11 @@ fun BusinessCardFooter(){
                     contentDescription = null,
                     tint = colorResource(R.color.teal_700),
                 )
+
+                Spacer(modifier = Modifier.width(16.dp))
+
                 Text(
-                    text = "+2348027904351",
-                    modifier = Modifier.padding(start = 16.dp)
+                    text = stringResource(R.string.phone_number),
                 )
             }
 
@@ -127,9 +131,10 @@ fun BusinessCardFooter(){
                     contentDescription = null,
                     tint = colorResource(R.color.teal_700),
                 )
+                Spacer(modifier = Modifier.width(16.dp))
+
                 Text(
-                    text = "@iAmGreatGrant",
-                    modifier = Modifier.padding(start = 16.dp)
+                    text = stringResource(R.string.username),
                 )
             }
 
@@ -144,9 +149,10 @@ fun BusinessCardFooter(){
                     tint = colorResource(R.color.teal_700),
                     contentDescription = null,
                 )
+                Spacer(modifier = Modifier.width(16.dp))
+
                 Text(
-                    text = "greatgrant116@gmail.com",
-                    modifier = Modifier.padding(start = 16.dp)
+                    text = stringResource(R.string.email),
                 )
             }
         }
