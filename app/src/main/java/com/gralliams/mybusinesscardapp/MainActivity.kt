@@ -10,7 +10,6 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -30,7 +29,6 @@ import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -46,7 +44,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CardHeader()
+                    BusinessCard()
                 }
             }
         }
@@ -54,7 +52,13 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun CardHeader() {
+fun BusinessCard(){
+    BusinessCardHeader()
+    BusinessCardFooter()
+}
+
+@Composable
+fun BusinessCardHeader() {
     Column(
         modifier = Modifier
             .fillMaxSize(),
@@ -83,11 +87,11 @@ fun CardHeader() {
         )
 
         Text(
+
             text = stringResource(R.string.caption),
             color = Color(0xFF3ddc84)
         )
     }
-    BusinessCardFooter()
 
 }
 
@@ -147,11 +151,11 @@ fun RowItem(iconResId: Int, text: String) {
 }
 
 @Preview(
-    showBackground = true,
+    showBackground =rue,
     showSystemUi = true)
 @Composable
 fun BusinessCardPreview() {
     MyBusinessCardAppTheme {
-        CardHeader()
+        BusinessCard()
     }
 }
