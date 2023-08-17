@@ -84,7 +84,7 @@ fun CardHeader() {
 
         Text(
             text = stringResource(R.string.caption),
-            color = colorResource(R.color.teal_700)
+            color = Color(0xFF3ddc84)
         )
     }
     BusinessCardFooter()
@@ -131,7 +131,7 @@ fun RowItem(iconResId: Int, text: String) {
         Icon(
             painter = painterResource(id = iconResId),
             contentDescription = null,
-            tint = colorResource(id = R.color.teal_700),
+            tint = Color(0xFF3ddc84),
             modifier = Modifier.size(24.dp)
         )
 
