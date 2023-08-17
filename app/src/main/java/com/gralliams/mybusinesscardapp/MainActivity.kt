@@ -59,7 +59,7 @@ fun CardHeader() {
         Box(
             modifier = Modifier
                 .height(120.dp)
-                .width(150.dp)
+                .width(120.dp)
                 .padding(bottom = 8.dp)
                 .background(colorResource(R.color.dark_blue))
         ){
@@ -74,7 +74,7 @@ fun CardHeader() {
         Text(
             text = "Grant Williams",
             modifier = Modifier.padding(bottom = 8.dp, top = 8.dp),
-            fontSize = 20.sp
+            fontSize = 36.sp
         )
 
         Text(
@@ -102,11 +102,11 @@ fun CardHeader() {
                 Icon(
                     painter = painterResource(id = R.drawable.baseline_phone_24),
                     contentDescription = null,
-                    tint = Color.Green,
+                    tint = colorResource(R.color.teal_700),
                 )
                 Text(
                     text = "+2348027904351",
-                    modifier = Modifier.padding(start = 8.dp)
+                    modifier = Modifier.padding(start = 16.dp)
                 )
             }
 
@@ -120,11 +120,11 @@ fun CardHeader() {
                 Icon(
                     painter = painterResource(id = R.drawable.baseline_share_24),
                     contentDescription = null,
-                    tint = Color.Green,
+                    tint = colorResource(R.color.teal_700),
                 )
                 Text(
                     text = "@iAmGreatGrant",
-                    modifier = Modifier.padding(start = 8.dp)
+                    modifier = Modifier.padding(start = 16.dp)
                 )
             }
 
@@ -136,12 +136,12 @@ fun CardHeader() {
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.baseline_message_24),
-                    tint = Color.Green,
-                    contentDescription = null
+                    tint = colorResource(R.color.teal_700),
+                    contentDescription = null,
                 )
                 Text(
                     text = "greatgrant116@gmail.com",
-                    modifier = Modifier.padding(start = 8.dp)
+                    modifier = Modifier.padding(start = 16.dp)
                 )
             }
         }
