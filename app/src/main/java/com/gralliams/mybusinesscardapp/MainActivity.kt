@@ -82,7 +82,12 @@ fun CardHeader() {
             color = colorResource(R.color.teal_700)
         )
     }
+    BusinessCardFooter()
 
+}
+
+@Composable
+fun BusinessCardFooter(){
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -147,15 +152,6 @@ fun CardHeader() {
         }
     }
 }
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
 @Preview(
     showBackground = true,
     showSystemUi = true)
