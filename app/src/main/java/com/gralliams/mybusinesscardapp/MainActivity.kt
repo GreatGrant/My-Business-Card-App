@@ -55,15 +55,20 @@ fun CardHeader() {
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Image(
-            painter = painterResource(id = R.drawable.android_logo),
-            contentDescription = null,
-            contentScale = ContentScale.Crop,
+        Box(
             modifier = Modifier
                 .height(120.dp)
                 .width(150.dp)
                 .padding(bottom = 8.dp)
-        )
+                .background(Color(R.color.dark_blue))
+        ){
+            Image(
+                painter = painterResource(id = R.drawable.android_logo),
+                contentDescription = null,
+                contentScale = ContentScale.Crop,
+                modifier = Modifier.fillMaxSize()
+            )
+        }
 
         Text(
             text = "Grant Williams",
@@ -73,7 +78,7 @@ fun CardHeader() {
 
         Text(
             text = "Android Developer Extraordinaire",
-            color = Color.Green
+            color = Color(R.color.teal_700)
         )
     }
 
