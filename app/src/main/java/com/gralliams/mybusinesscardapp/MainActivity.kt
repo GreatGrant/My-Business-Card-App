@@ -24,6 +24,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -60,7 +61,7 @@ fun CardHeader() {
                 .height(120.dp)
                 .width(150.dp)
                 .padding(bottom = 8.dp)
-                .background(Color(R.color.dark_blue))
+                .background(colorResource(R.color.dark_blue))
         ){
             Image(
                 painter = painterResource(id = R.drawable.android_logo),
@@ -78,7 +79,7 @@ fun CardHeader() {
 
         Text(
             text = "Android Developer Extraordinaire",
-            color = Color(R.color.teal_700)
+            color = colorResource(R.color.teal_700)
         )
     }
 
