@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -28,6 +29,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -99,65 +102,49 @@ fun BusinessCardFooter(){
             modifier = Modifier
                 .align(Alignment.BottomCenter)
         ) {
-            Row(
-                modifier = Modifier
-                    .padding(bottom = 16.dp)
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.baseline_phone_24),
-                    contentDescription = null,
-                    tint = colorResource(R.color.teal_700),
-                )
 
-                Spacer(modifier = Modifier.width(16.dp))
-
-                Text(
-                    text = stringResource(R.string.phone_number),
-                )
-            }
-
-            Row(
-                modifier = Modifier
-                    .padding(bottom = 16.dp)
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.baseline_share_24),
-                    contentDescription = null,
-                    tint = colorResource(R.color.teal_700),
-                )
-                Spacer(modifier = Modifier.width(16.dp))
-
-                Text(
-                    text = stringResource(R.string.username),
-                )
-            }
-
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth(),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Icon(
-                    painter = painterResource(id = R.drawable.baseline_message_24),
-                    tint = colorResource(R.color.teal_700),
-                    contentDescription = null,
-                )
-                Spacer(modifier = Modifier.width(16.dp))
-
-                Text(
-                    text = stringResource(R.string.email),
-                )
-            }
+            RowItem(
+                iconResId = R.drawable.baseline_phone_24,
+                text = stringResource(R.string.phone_number),
+            )
+            RowItem(
+                iconResId = R.drawable.baseline_share_24,
+                text = stringResource(R.string.username)
+            )
+            RowItem(
+                iconResId = R.drawable.baseline_message_24,
+                text = stringResource(R.string.email)
+            )
         }
     }
 }
+
+@Composable
+fun RowItem(iconResId: Int, text: String) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(bottom = 16.dp),
+        horizontalArrangement = Arrangement.Center,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Icon(
+            painter = painterResource(id = iconResId),
+            contentDescription = null,
+            tint = colorResource(id = R.color.android_green),
+            modifier = Modifier.size(24.dp)
+        )
+
+        Spacer(modifier = Modifier.width(8.dp))
+
+        Text(
+            text = text,
+            fontWeight = FontWeight.Normal,
+            fontSize = 16.sp,
+        )
+    }
+}
+
 @Preview(
     showBackground = true,
     showSystemUi = true)
